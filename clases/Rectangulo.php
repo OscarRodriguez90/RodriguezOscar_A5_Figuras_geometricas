@@ -1,45 +1,43 @@
 <?php
 
-class Rectangulo extends Figura {
-    protected $ancho;
-    protected $altura;
+require_once 'FiguraGeometrica.php';
 
-    public function __construct($ancho, $altura) {
-        $this->setAncho($ancho);
-        $this->setAltura($altura);
+class Rectangulo extends FiguraGeometrica {
+    protected $lado2;
+
+    public function __construct($lado1, $lado2) {
+        parent::__construct('Rectángulo', $lado1);
+        $this->setLado2($lado2);
     }
 
-    public function setAncho($ancho) {
-        if ($ancho > 0) {
-            $this->ancho = $ancho;
+    public function __destruct() {
+        // Destructor vacío
+    }
+
+    public function setLado2($lado2) {
+        if ($lado2 > 0) {
+            $this->lado2 = $lado2;
         } else {
-            echo "El ancho debe ser un número positivo.<br>";
-            
+            echo "El lado2 debe ser un número positivo.<br>";
+            $this->lado2 = 0;
         }
     }
 
-    public function getAncho() {
-        return $this->ancho;
+    public function getLado2() {
+        return $this->lado2;
     }
 
-    public function setAltura($altura) {
-        if ($altura > 0) {
-            $this->altura = $altura;
-        } else {
-            echo "La altura debe ser un número positivo.<br>";
-            
-        }
+    public function calcularArea() {
+        return $this->getLado1() * $this->getLado2();
     }
 
-    public function getAltura() {
-        return $this->altura;
+    public function calcularPerimetro() {
+        return 2 * ($this->getLado1() + $this->getLado2());
     }
 
-    public function area() {
-        return $this->ancho * $this->altura;
-    }
-
-    public function perimetro() {
-        return 2 * ($this->ancho + $this->altura);
+    public function __toString() {
+        return "Rectángulo de lados " . $this->getLado1() . " y " . $this->getLado2() .
+               ". Área: " . $this->calcularArea() .
+               ". Perímetro: " . $this->calcularPerimetro();
     }
 }

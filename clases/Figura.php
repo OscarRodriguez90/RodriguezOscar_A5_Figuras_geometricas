@@ -1,18 +1,35 @@
 <?php
 
-<?php
+class FiguraGeometrica {
+    protected $tipoFigura;
+    protected $lado1;
 
-class Figura {
-    protected $dimensiones = [];
-
-    public function setDimensiones(array $dimensiones) {
-        $this->dimensiones = $dimensiones;
+    public function __construct($tipoFigura, $lado1) {
+        $this->tipoFigura = $tipoFigura;
+        $this->lado1 = $lado1;
     }
 
-    public function getDimensiones() {
-        return $this->dimensiones;
+    public function __destruct() {
+        // Destructor vacío
     }
 
-    public function area();
-    public function perimetro();
+    public function getTipoFigura() {
+        return $this->tipoFigura;
+    }
+
+    public function setTipoFigura($tipoFigura) {
+        $this->tipoFigura = $tipoFigura;
+    }
+
+    public function getLado1() {
+        return $this->lado1;
+    }
+
+    public function setLado1($lado1) {
+        $this->lado1 = $lado1;
+    }
+
+    public function calcularArea() {
+        // Método sin funcionalidad concreta
+    }
 }
