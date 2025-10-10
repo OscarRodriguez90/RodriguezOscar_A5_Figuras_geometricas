@@ -1,18 +1,17 @@
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <title>Selecciona una figura geométrica</title>
 </head>
 <body>
     <h1>Calculadora de Figuras Geométricas</h1>
-    <form method="POST" action="public/selecciona_lados.php">
+    <form method="GET" action="views/selecciona_lados.php">
         <label for="figura">Selecciona una figura:</label>
         <select name="figura" id="figura" required>
+            <option value="">--Selecciona--</option>
             <option value="triangulo">Triángulo</option>
             <option value="rectangulo">Rectángulo</option>
             <option value="cuadrado">Cuadrado</option>
