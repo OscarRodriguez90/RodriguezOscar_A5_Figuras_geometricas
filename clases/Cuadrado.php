@@ -1,7 +1,7 @@
 <?php
 
 
-require_once 'FiguraGeometrica.php';
+require_once 'Figura.php';
 
 class Cuadrado extends FiguraGeometrica {
 

@@ -1,7 +1,7 @@
 <?php
 
 
-require_once 'FiguraGeometrica.php';
+require_once 'Figura.php';
 
 class Triangulo extends FiguraGeometrica {
     protected $lado2;
@@ -45,11 +45,11 @@ class Triangulo extends FiguraGeometrica {
 
     public function calcularArea() {
         // Fórmula de Herón
-        $a = $this->getLado1();
+        
         $b = $this->getLado2();
         $c = $this->getLado3();
-        $s = ($a + $b + $c) / 2;
-        $area = sqrt($s * ($s - $a) * ($s - $b) * ($s - $c));
+        
+        $area = ($b * $c) / 2;
         return $area;
     }
 

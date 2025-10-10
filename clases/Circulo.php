@@ -1,6 +1,6 @@
 <?php
 
-require_once 'FiguraGeometrica.php'; // Importamos la clase base
+require_once 'Figura.php'; // Importamos la clase base
 
 class Circulo extends FiguraGeometrica {
     protected $radio;
@@ -15,7 +15,7 @@ class Circulo extends FiguraGeometrica {
     public function __destruct() {
         // Destructor vacío (no hace nada especial)
     }
-    
+
     // Getter y Setter específicos del círculo
     public function getRadio() {
         return $this->radio;

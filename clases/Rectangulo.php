@@ -1,6 +1,6 @@
 <?php
 
-require_once 'FiguraGeometrica.php';
+require_once 'Figura.php';
 
 class Rectangulo extends FiguraGeometrica {
     protected $lado2;
