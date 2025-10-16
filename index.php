@@ -21,7 +21,7 @@
       <form method="GET" action="views/selecciona_lados.php">
         <div class="mb-3">
           <label for="figura" class="form-label">Selecciona una figura:</label>
-          <select name="figura" id="figura" class="form-select" required>
+          <select name="figura" id="figura" class="form-select">
             <option value="">--Selecciona--</option>
             <option value="triangulo">Triángulo</option>
             <option value="rectangulo">Rectángulo</option>

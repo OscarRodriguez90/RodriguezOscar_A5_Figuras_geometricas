@@ -18,12 +18,8 @@ class Triangulo extends FiguraGeometrica {
     }
 
     public function setLado2($lado2) {
-        if ($lado2 > 0) {
             $this->lado2 = $lado2;
-        } else {
-            echo "El lado2 debe ser un número positivo.<br>";
-            $this->lado2 = 0;
-        }
+        
     }
 
     public function getLado2() {
@@ -31,12 +27,8 @@ class Triangulo extends FiguraGeometrica {
     }
 
     public function setLado3($lado3) {
-        if ($lado3 > 0) {
             $this->lado3 = $lado3;
-        } else {
-            echo "El lado3 debe ser un número positivo.<br>";
-            $this->lado3 = 0;
-        }
+    
     }
 
     public function getLado3() {
@@ -44,8 +36,6 @@ class Triangulo extends FiguraGeometrica {
     }
 
     public function calcularArea() {
-        // Fórmula de Herón
-        
         $b = $this->getLado2();
         $c = $this->getLado3();
         

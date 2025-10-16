@@ -15,12 +15,8 @@ class Rectangulo extends FiguraGeometrica {
     }
 
     public function setLado2($lado2) {
-        if ($lado2 > 0) {
             $this->lado2 = $lado2;
-        } else {
-            echo "El lado2 debe ser un número positivo.<br>";
-            $this->lado2 = 0;
-        }
+        
     }
 
     public function getLado2() {
